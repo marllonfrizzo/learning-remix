@@ -14,8 +14,6 @@ export default function PostSlug() {
     const post = useLoaderData<Post>();
 
     return (
-        <main>
-            <h1>{post.title}</h1>
-        </main>
+        <main dangerouslySetInnerHTML={{ __html: post.html }} />
     );
 }
